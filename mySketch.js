@@ -1,6 +1,8 @@
 let myFont = undefined;
 let inputArea = undefined;
 let fontColor = 20;
+let isReqSaveImage = false;
+let hedgehogPict;
 
 const gOptions = {
   bgColor: '#ffffff',
@@ -22,6 +24,11 @@ function createCols(url) {
   for (let i = 0; i < colArr.length; i++) colArr[i] = '#' + colArr[i];
   return colArr;
 }
+
+function preload() {
+  hedgehogPict = loadImage('./images/hedgehog_3d.png');
+}
+
 
 function setup() {
   const cvs = createCanvas(windowWidth, windowHeight);
@@ -71,14 +78,20 @@ const randomizeColor = () => {
 
 function draw() {
   if (myFont === undefined) {
-    background(20);
+    background(220);
     push();
-    fill('#FFFFFF80');
+    fill(220);
     rect(width / 2, height / 2, width, height);
     fill(20);
     // textSize(20);
-    text('1. Click/Tap HERE \n to download ZTMY font.', width / 2, height / 4);
-    text('2. Click/Tap HERE \n to set downloaded ZTMY font.', width / 2, (3 * height) / 4);
+    textSize(height / 25);
+    text("'ZTMY Font' Tester", width / 2, height / 10);
+    image(hedgehogPict, width / 2 - (height / 25) * 6.1, height / 14.3, height / 20, height / 20);
+    image(hedgehogPict, width / 2 + (height / 25) * 6.1 - height / 20, height / 14.3, height / 20, height / 20);
+
+    textSize(height / 30);
+    text('1. Click/Tap HERE \n to download ZTMY font.', width / 2, height / 4 * 1.2);
+    text('2. Click/Tap HERE \n to set downloaded ZTMY font.', width / 2, (3 * height) / 4 * 0.95);
     stroke(20);
     strokeWeight(3);
     line(width / 10, height / 2, (9 * width) / 10, height / 2);
@@ -93,8 +106,24 @@ function draw() {
     background(options.bgColor);
     fill(options.fontColor);
     textSize(options.fontSize);
-    text(inputArea.value(), width / 2, height / 2, width, height);
+
+    let leftMargin = 0;
+    if(options.isCenterAlign){
+      textAlign(CENTER)
+    }else{
+      leftMargin = width * 0.1;
+      textAlign(LEFT)
+    }
+    text(inputArea.value(), width / 2 + leftMargin, height / 2, width, height);
   }
+
+  if(isReqSaveImage){
+    isReqSaveImage = false;
+    saveImage();
+  }
+
+  drawCopyRight();
+
 }
 
 let input;
@@ -122,4 +151,17 @@ const setFontColor = () => {
       break;
   }
   fill(fontColor);
+};
+
+const drawCopyRight = () => {
+  push();
+  textAlign(LEFT)
+  textSize(height / 80);
+  fill(20)
+  text(
+    'Hosted on GitHub. Version 0.8.0. Copyright (c) 2024 Tetsunori Nakayama. MIT License.',
+    20,
+    height - 20
+  );
+  pop();
 };

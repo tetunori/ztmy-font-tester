@@ -14,7 +14,7 @@ const utilities = {
     gui.updateDisplay();
   },
   Download: () => {
-    saveImage();
+    isReqSaveImage = true;
   },
   GitHub: () => {
     window.open('https://github.com/tetunori/ztmy-font-tester', '_blank');
