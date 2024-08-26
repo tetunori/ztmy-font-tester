@@ -1,10 +1,4 @@
 
-function keyTyped() {
-  if (key === 's') {
-    saveImage();
-  }
-}
-
 // Save generated image
 const saveImage = () => {
   const name = getYYYYMMDD_hhmmss(true) + '.png';

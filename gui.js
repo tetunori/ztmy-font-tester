@@ -31,14 +31,14 @@ const prepareDatGUI = (opt) => {
   DefaultOptions.isCenterAlign = opt.isCenterAlign;
   initializeSettings();
 
-  gui.addColor(options, 'bgColor').name('背景色🎨');
-  gui.addColor(options, 'fontColor').name('文字色🎨');
+  gui.addColor(options, 'bgColor').name('背景色 🎨');
+  gui.addColor(options, 'fontColor').name('文字色 🎨');
   gui
     .add(options, 'fontSize', 5, 100, 1)
     .name('フォントサイズ');
-  gui.add(utilities, 'RandomizeColor').name('ランダムZTMY色🎨');
+  gui.add(utilities, 'RandomizeColor').name('ランダムZTMY色 🎨');
 
-  gui.add(options, 'isCenterAlign', true).name('左揃え ⇔ 中央寄せ');
+  gui.add(options, 'isCenterAlign', true).name('中央寄せ');
   gui.add(utilities, 'Reset').name('設定リセット 🐱');
 
   gui.add(utilities, 'Download').name('画像ダウンロード');
