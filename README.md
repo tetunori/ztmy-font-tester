@@ -1,6 +1,6 @@
 # ZTMY Font Tester🦔
-Version 0.8.0 
-<img src="./images/keyVisual.png" width="360px"/>
+Version 0.8.0  
+<img src="./images/keyVisual.png" width="640px"/>
 
 # Description🖊️
 ZTMYフォントで試し書きするためのツールです。  
@@ -9,7 +9,17 @@ ZTMYフォントで試し書きするためのツールです。
 # Usage🪄
 1. 画面の上半分をタップするか、[ここ](https://zutomayo.net/font/)からZTMYフォントをダウンロードする。
 2. 画面の下半分をタップして、ダウンロードしたZTMYフォントを選択する
-3. 自由に試し書きをどうぞ～
+3. 自由に試し書きをどうぞ～  
+
+右上のコントローラーから以下もできます。
+- 背景色の変更
+- 文字色の変更
+- フォントサイズの変更
+- ZTMYカラーからランダムに背景色・文字色を選択
+- 左揃え⇔中央寄せ の変更
+- (上記の)設定の(猫)リセット
+- 画像としてダウンロード
+- GitHub(このページ)への移動
 
 # License⚖️
 Copyright (c) 2024 [Tetsunori Nakayama](https://github.com/tetunori). MIT License.
