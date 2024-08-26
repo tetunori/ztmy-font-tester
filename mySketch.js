@@ -36,6 +36,7 @@ function setup() {
   // Prepare canvas
   const cvs = createCanvas(windowWidth, windowHeight);
   cvs.drop(gotFile); // support drag&drop
+  cvs.mouseClicked(_mouseClicked); // for Safari.
 
   randomizeColor();
   textAlign(CENTER, CENTER);
@@ -175,7 +176,7 @@ const drawZTMYTextScreen = () => {
   text(inputArea.value(), width / 2 + leftMargin, height / 2, width, height);
 };
 
-function mouseClicked() {
+const _mouseClicked = () => {
   if (!ztmyFont) {
     if (mouseY < height / 2) {
       const url = 'https://zutomayo.net/font/';
