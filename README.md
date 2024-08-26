@@ -7,9 +7,10 @@ ZTMYフォントで試し書きするためのツールです。
 ※ 後日公開予定の[ztmy-font-decoder](https://github.com/tetunori/ztmy-font-decoder)の検証用途で作成。
 
 # Usage🪄
-1. 画面の上半分をタップするか、[ここ](https://zutomayo.net/font/)からZTMYフォントをダウンロードする。
-2. 画面の下半分をタップして、ダウンロードしたZTMYフォントを選択する
-3. 自由に試し書きをどうぞ～  
+1. [ztmy-font-tester](https://tetunori.github.io/ztmy-font-tester/)にアクセスする
+2. 画面の上半分をタップするか、[ここ](https://zutomayo.net/font/)からZTMYフォントをダウンロードする。
+3. 画面の下半分をタップして、ダウンロードしたZTMYフォントを選択する
+4. 自由に試し書きをどうぞ～  
 
 右上のコントローラーから以下もできます。
 - 背景色の変更
